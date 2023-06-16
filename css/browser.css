@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --mainColor: #1f2122;
+  --borderColor: #666666;
+  --secondColor: #27292a;
+  --fontColor: #ec6090;
+  --transitionMain: 0.3s all;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-align: none;
+}
+body {
+  background: var(--mainColor);
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+.navbar {
+  box-shadow: none;
+  background-color: var(--mainColor);
+  padding: 22px 0;
+}
+
+.navbar .container .LinkLogo {
+  border-right: 1px solid #27292a;
+  flex-basis: 35%;
+  margin-right: 5%;
+}
+.navbar .container .FormSearch .InputSearch {
+  border: 1px solid var(--borferColor);
+  background-color: var(--secondColor);
+  width: 98%;
+  color: var(--borderColor);
+  height: 46px;
+  padding: 0px 15px 0px 49px;
+  font-size: 14px;
+}
+.navbar .container .IconSearch {
+  position: absolute;
+  left: 25px;
+  color: var(--borderColor);
+  font-size: 16px;
+}
+.navbar .container .links {
+  gap: 37px;
+  display: flex !important;
+}
+.navbar .container .MuneLinks {
+  display: none;
+  position: absolute;
+  top: 100%;
+  padding: 10px 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 222;
+  flex-direction: column;
+  background-color: #fff;
+  width: 90%;
+  gap: 37px;
+  transition: var(--transitionMain);
+}
+.navbar .container .MuneLinks:hover {
+  border-left: 15px solid var(--fontColor);
+}
+.navbar .container .MuneLinks li {
+  transition: var(--transitionMain);
+}
+.navbar .container .MuneLinks li:hover {
+  padding-left: 20px;
+}
+.navbar .container .MuneLinks li a:hover {
+  color: var(--fontColor);
+}
+.navbar .container .links .Profile {
+  background-color: var(--secondColor);
+  padding: 8px 10px 8px 20px;
+  transition: var(--transitionMain);
+}
+.navbar .container .links a {
+  color: var(--borderColor);
+  transition: var(--transitionMain);
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.navbar .container .links .home {
+  color: var(--fontColor);
+}
+.navbar .container .links a:hover {
+  color: var(--fontColor);
+}
+.navbar .container .links .Profile:hover {
+  background-color: var(--fontColor);
+}
+.navbar .container .links .Profile:hover a {
+  color: #fff;
+}
+.IconDots {
+  position: absolute;
+  width: 32px;
+  height: 20px;
+  padding: 25px 40px 25px 20px;
+  margin: auto;
+  top: 15px;
+  right: 35px;
+  display: none;
+}
+.IconDots .dots {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: var(--fontColor);
+}
+.Dotts .dots {
+  background-color: transparent;
+}
+.IconDots .dots::after,
+.IconDots .dots::before {
+  content: "";
+  background-color: var(--fontColor);
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  transition: var(--transitionMain);
+}
+.IconDots .dots::before {
+  bottom: calc(100% + 7px);
+}
+.IconDots .dots::after {
+  top: calc(100% + 7px);
+}
+.Dotts .dots::after {
+  transform: translateY(-15px) translateX(-1px) rotate(-45deg);
+  width: 100%;
+}
+.Dotts .dots::before {
+  width: 100%;
+  transform: translateY(3px) translateX(0px) rotate(45deg);
+}
+@media (max-width: 992px) {
+  .navbar {
+    background-color: #f6f2f2;
+  }
+  .navbar .container .LinkLogo {
+    border: none;
+    height: 30px;
+    margin-left: 20px;
+  }
+  .navbar .container .LinkLogo img {
+    height: 50px;
+  }
+  .navbar .container .FormSearch {
+    display: none;
+  }
+  .navbar .container .links {
+    display: none !important;
+  }
+  .navbar .container .MuneLinks {
+    display: flex !important;
+  }
+  .IconDots {
+    display: block;
+  }
+  .IconDots .dots {
+    display: block;
+  }
+}
+.swiper {
+  width: 180px;
+  height: 370px;
+}
+section .MainBackground{
+    background-color: var(--secondColor);
+    background-color: var(--secondColor);
+    padding: 60px;
+    border-radius: 20px;
+}
+/* Stat Featured Games  */
+.col{
+    background-color: #772424;
+     /* margin-left: 20px;  */
+}
+/* End Featured Games  */

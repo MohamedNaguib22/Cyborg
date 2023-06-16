@@ -1,0 +1,404 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --mainColor: #1f2122;
+  --borderColor: #666666;
+  --secondColor: #27292a;
+  --fontColor: #ec6090;
+  --transitionMain: 0.3s all;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-align: none;
+}
+body {
+  background: var(--mainColor);
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  box-shadow: none;
+  background-color: var(--mainColor);
+  padding: 22px 0;
+}
+
+.navbar .container .LinkLogo {
+  border-right: 1px solid #27292a;
+  flex-basis: 35%;
+  margin-right: 5%;
+}
+.navbar .container .FormSearch .InputSearch {
+  border: 1px solid var(--borferColor);
+  background-color: var(--secondColor);
+  width: 98%;
+  color: var(--borderColor);
+  height: 46px;
+  padding: 0px 15px 0px 49px;
+  font-size: 14px;
+}
+.navbar .container .IconSearch {
+  position: absolute;
+  left: 25px;
+  color: var(--borderColor);
+  font-size: 16px;
+}
+.navbar .container .links {
+  gap: 37px;
+  display: flex !important;
+}
+.navbar .container .MuneLinks {
+  display: none;
+  position: absolute;
+  top: 100%;
+  padding: 10px 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 222;       
+  flex-direction: column;
+  background-color: #fff;
+  width: 90%;
+  gap: 37px;
+  transition: var(--transitionMain);
+}
+.navbar .container .MuneLinks:hover {
+  border-left: 15px solid var(--fontColor);
+}
+.navbar .container .MuneLinks li {
+  transition: var(--transitionMain);
+}
+.navbar .container .MuneLinks li:hover {
+  padding-left: 20px;
+}
+.navbar .container .MuneLinks li a:hover {
+  color: var(--fontColor);
+}
+.navbar .container .links .Profile {
+  background-color: var(--secondColor);
+  padding: 8px 10px 8px 20px;
+  transition: var(--transitionMain);
+}
+.navbar .container .links a {
+  color: var(--borderColor);
+  transition: var(--transitionMain);
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.navbar .container .links .home {
+  color: var(--fontColor);
+}
+.navbar .container .links a:hover {
+  color: var(--fontColor);
+}
+.navbar .container .links .Profile:hover {
+  background-color: var(--fontColor);
+}
+.navbar .container .links .Profile:hover a {
+  color: #fff;
+}
+.IconDots {
+  position: absolute;
+  width: 32px;
+  height: 20px;
+  padding: 25px 40px 25px 20px;
+  margin: auto;
+  top: 15px;
+  right: 35px;
+  display: none;
+}
+.IconDots .dots {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: var(--fontColor);
+}
+.Dotts .dots {
+  background-color: transparent;
+}
+.IconDots .dots::after,
+.IconDots .dots::before {
+  content: "";
+  background-color: var(--fontColor);
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  transition: var(--transitionMain);
+}
+.IconDots .dots::before {
+  bottom: calc(100% + 7px);
+}
+.IconDots .dots::after {
+  top: calc(100% + 7px);
+}
+.Dotts .dots::after {
+  transform: translateY(-15px) translateX(-1px) rotate(-45deg);
+  width: 100%;
+}
+.Dotts .dots::before {
+  width: 100%;
+  transform: translateY(3px) translateX(0px) rotate(45deg);
+}
+@media (max-width: 992px) {
+  .navbar {
+    background-color: #f6f2f2;
+  }
+  .navbar .container .LinkLogo {
+    border: none;
+    height: 30px;
+    margin-left: 20px;
+  }
+  .navbar .container .LinkLogo img {
+    height: 50px;
+  }
+  .navbar .container .FormSearch {
+    display: none;
+  }
+  .navbar .container .links {
+    display: none !important;
+  }
+  .navbar .container .MuneLinks {
+    display: flex !important;
+  }
+  .IconDots {
+    display: block;
+  }
+  .IconDots .dots {
+    display: block;
+  }
+}
+/* End Nav */
+/* Start Main */
+.BackGroundSection {
+  background-color: var(--secondColor);
+  padding: 60px;
+  border-radius: 20px;
+}
+.main-banner {
+  background-image: url(/images/banner-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  min-height: 380px;
+  border-radius: 23px;
+  padding: 80px 60px;
+  position: relative;
+}
+.main-banner .Browse {
+  font-size: 46px;
+  line-height: 50px;
+  margin: 20px 0;
+}
+.main-banner .Browse span {
+  color: var(--fontColor);
+}
+.main-banner .BtnBrowse {
+  background-color: var(--fontColor);
+}
+.MainSection {
+  background-color: var(--mainColor);
+}
+
+.ContentHeader .MostContent {
+  letter-spacing: 0, 1px;
+  word-spacing: 0.1px;
+  font-size: 34px;
+  color: var(--fontColor);
+}
+.ContainerCard .card {
+  background-color: var(--secondColor);
+}
+.ContainerCard .card img {
+  width: 100%;
+}
+.ContainerCard .card ul li:first-child i {
+  color: #fded08;
+}
+.ContainerCard .card ul li:last-child i {
+  color: var(--fontColor);
+}
+.DubbleCard {
+  background-color: var(--secondColor);
+}
+
+.BtnDiscover {
+  text-align: center;
+}
+.BtnDiscover a {
+  font-size: 14px;
+  color: #fff;
+  background-color: var(--fontColor);
+  padding: 15px 30px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  position: relative;
+  margin-bottom: -30px;
+  overflow: hidden;
+}
+.ScoundSection {
+  background-color: var(--mainColor);
+}
+
+.GamingLibrary {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.GamingLibrary::after {
+  content: "";
+  width: 95%;
+  height: 1px;
+  background-color: var(--secondColor);
+  position: absolute;
+  top: calc(100% + 10px);
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+.MostContent .two {
+  color: var(--fontColor);
+}
+.GamingLibrary li:not(:first-child .LiTwo) {
+  text-align: center;
+}
+.GamingLibrary li {
+  width: 15%;
+}
+.GamingLibrary h5 {
+  font-size: 19px;
+  margin-top: 20px;
+}
+.GamingLibrary h6 {
+  font-size: 15px;
+  color: var(--borderColor);
+}
+.GamingLibrary .BtnDownload {
+  padding: 15px 45px;
+  border: 1px solid var(--borderColor);
+  color: var(--borderColor);
+}
+.GamingLibrary .activ {
+  border: none;
+  background-color: var(--fontColor);
+  width: 195px;
+  margin-left: -8px;
+}
+@media (max-width: 452px) {
+  .ContentHeaderpe .GamingContent {
+    font-size: 20px;
+    margin-left: -30px;
+  }
+  .GamingLibrary {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: repeat(4, 75px);
+  }
+  .GamingLibrary li h5 {
+    width: 100px;
+    font-size: 13px;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .GamingLibrary li h6 {
+    width: 100px;
+    font-size: 12px;
+    text-align: center;
+  }
+  .GamingLibrary li:first-child,
+  .GamingLibrary li:last-child {
+    grid-column: span 2;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+  }
+}
+@media only screen and (min-width: 453px) and (max-width: 576px) {
+  .ContentHeaderpe .GamingContent {
+    font-size: 20px;
+    margin-left: -30px;
+  }
+  .GamingLibrary {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(4, 75px);
+  }
+  .GamingLibrary li h5 {
+    width: 100px;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 90px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .GamingLibrary li h6 {
+    width: 100px;
+    font-size: 13px;
+    margin-left: 90px;
+    text-align: center;
+  }
+  .GamingLibrary .LiSm {
+    margin-left: 30px;
+  }
+  .GamingLibrary li:first-child,
+  .GamingLibrary li:last-child {
+    grid-column: span 2;
+    width: 100%;
+    margin-left: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+  .ContentHeaderpe .GamingContent {
+    font-size: 25px;
+    margin-left: -30px;
+  }
+  .GamingLibrary {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 55%);
+    grid-template-rows: repeat(3, 75px);
+  }
+  .GamingLibrary li:last-child {
+    grid-area: 3 /2 / 4 / 2;
+    margin-top: 20px;
+  }
+  .GamingLibrary li:last-child a {
+    padding: 10px 25px;
+    margin-left: -10px;
+  }
+  .GamingLibrary li:last-child .activ {
+    margin-left: -30px;
+  }
+  .GamingLibrary li h5 {
+    font-size: 15px;
+    width: 120px;
+    text-align: center;
+  }
+  .GamingLibrary li h6 {
+    font-size: 15px;
+    width: 120px;
+    text-align: center;
+  }
+}
+/* End Main */
+/* Start Footer */
+.Footer a {
+  color: var(--fontColor);
+}
+/* End Footer */
+
+
